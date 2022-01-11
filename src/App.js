@@ -17,7 +17,7 @@ export default function App() {
       <Router>
         <Header />
 
-        <div>
+        <div className=" cursor-default">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="courses" element={<Courses />} />

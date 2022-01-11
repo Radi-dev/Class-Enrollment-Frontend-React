@@ -12,6 +12,7 @@ const ImgOrAlt = ({ src, alt = "Image", ...props }) => {
     <img src={String(src)} alt={alt} onError={clickHandler} {...props}></img>
   );
   const [Img, setImg] = useState(imgJsx);
+
   return Img;
 };
 

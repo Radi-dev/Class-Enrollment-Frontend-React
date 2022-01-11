@@ -1,6 +1,8 @@
-import { courseData } from "../dummyData/courseData";
+import { dataRequest, links, courseData as cd } from "../dummyData/Data";
 import ImgOrAlt from "./ImgOrAlt";
+
 function Courses() {
+  const courseData = dataRequest(cd, links.courses);
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -14,26 +16,30 @@ function Courses() {
             haven't heard of them.
           </p>
         </div>
-        <div className="flex flex-wrap -m-2">
-          {courseData.map((course, i) => (
-            <div key={i} className="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div className="relat ive overflow-clip h-full flex items-center border-purple-300 bg-purple-100 border-2 rounded-lg">
-                <div className="float-left w-3/12 h-full bg-gray-400 overflow-clip m-0 mr-2">
-                  <ImgOrAlt
-                    alt={course.title}
-                    className="object-cover object-center"
-                    src="http://127.0.0.1:8000/media/profile_pics/Tumblr.jfif"
-                  />
-                </div>
-                <div className="flex-grow">
-                  <h2 className="text-gray-900 title-font font-medium">
-                    {course.title}
-                  </h2>
-                  <p className="text-gray-500">{course.description}</p>
+        <div className=" grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+          {courseData ? (
+            courseData.map((course, i) => (
+              <div key={i} className=" h-32 ">
+                <div className=" relat ive overflow-clip h-full flex items-center border-fuchsia-300 bg-purple-100 border-2 rounded-lg">
+                  <div className="float-left w-3/12 h-full bg-purple-100 overflow-clip m-0 mr-2">
+                    <ImgOrAlt
+                      alt={course.title}
+                      className=" h-full w-full object-cover object-center"
+                      src={course.thumb_photo}
+                    />
+                  </div>
+                  <div className="flex-grow">
+                    <h2 className="text-gray-900 title-font font-medium">
+                      {course.title}
+                    </h2>
+                    <p className="text-gray-500">{course.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>fetching data...</p>
+          )}
         </div>
       </div>
     </section>
