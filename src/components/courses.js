@@ -1,4 +1,4 @@
-import { dataRequest, links, courseData as cd } from "../dummyData/Data";
+import { dataRequest, links, courseData as cd } from "../data/Data";
 import ImgOrAlt from "./ImgOrAlt";
 
 function Courses() {
@@ -19,8 +19,11 @@ function Courses() {
         <div className=" grid gap-2 md:grid-cols-2 lg:grid-cols-3">
           {courseData ? (
             courseData.map((course, i) => (
-              <div key={i} className=" h-32 ">
-                <div className=" relat ive overflow-clip h-full flex items-center border-fuchsia-300 bg-purple-100 border-2 rounded-lg">
+              <div
+                key={i}
+                className="transform m-2 transition-all scale-100 hover:scale-y-105 h-32 "
+              >
+                <div className=" overflow-clip h-full flex items-center border-blue-300 bg-blue -100 border rounded-md shadow-md">
                   <div className="float-left w-3/12 h-full bg-purple-100 overflow-clip m-0 mr-2">
                     <ImgOrAlt
                       alt={course.title}
@@ -29,7 +32,7 @@ function Courses() {
                     />
                   </div>
                   <div className="flex-grow">
-                    <h2 className="text-gray-900 title-font font-medium">
+                    <h2 className="text-blue-600 title-font font-medium">
                       {course.title}
                     </h2>
                     <p className="text-gray-500">{course.description}</p>
