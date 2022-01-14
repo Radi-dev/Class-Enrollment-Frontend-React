@@ -1,5 +1,5 @@
 import AxiosGet from "../components/useAxios";
-const site = "http://localhost:8000/api";
+import { site } from "./settings";
 
 export const dataRequest = (dummy = [], link = null) => {
   const data = link ? AxiosGet(link) : dummy;
@@ -11,7 +11,7 @@ export const links = {
   tutors: site + "/tutors/",
   outlines: site + "/outlines/",
 };
-export const courseData = [
+export const dummyCourseData = [
   {
     id: 1,
     tutor: null,
@@ -151,7 +151,7 @@ export const courseData = [
   },
 ];
 
-export const courseOutlines = [
+export const dummyCourseOutlines = [
   {
     course: 1,
     title: "Gathering pipes",

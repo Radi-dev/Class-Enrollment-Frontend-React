@@ -1,8 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+@layer components {
+  .navbar {
+    @apply lg:hidden transform top-0 duration-300 origin-right
+    absolute right-0 w-screenHalf z-50;
+  }
+  .bg-prim1 {
+    @apply bg-violet-200;
+  }
+  .text-prim1 {
+    @apply text-violet-200;
+  }
+
+  .bg-prim1-dark {
+    @apply;
+  }
+  .text-prim1-dark {
+    @apply;
+  }
+  .bg-sec {
+    @apply;
+  }
+  .text-sec {
+    @apply;
+  }
+  .bg-highl {
+    @apply bg-cyan-500;
+  }
+  .bg-highl-hov {
+    @apply bg-cyan-500 hover:bg-cyan-400;
+  }
+  .text-highl {
+    @apply text-cyan-500;
+  }
+  .border-highl {
+    @apply border-cyan-300;
+  }
+}
 
 @layer utilities {
+  .home-bg {
+    content: " ";
+    background-image: url("../public/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   @layer base {
     html {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
