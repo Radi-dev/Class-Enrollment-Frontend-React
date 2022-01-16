@@ -1,4 +1,5 @@
 import Header from "./header";
+import Footer from "./footer";
 import { Link } from "react-router-dom";
 export default function Home(params) {
   const linksJsx = (
@@ -19,7 +20,7 @@ export default function Home(params) {
   );
   return (
     <>
-      <Header dark={1} />
+      <Header dark />
       <div className="home box-border h-screen80 w-full flex z-20 items-center overflow-hidden">
         <div className="home-bg absolute inset-0 z-1 0 opacity-40  h-full w-full "></div>
 
@@ -46,6 +47,7 @@ export default function Home(params) {
           </div>
         </div>
       </div>
+      <Footer dark />
     </>
   );
 }

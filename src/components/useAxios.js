@@ -6,7 +6,7 @@ export default function AxiosGet(link) {
 
   useEffect(() => {
     axios
-      .get(link)
+      .get(link, { headers: { "Content-Type": "application/json" } })
       .then((res) => {
         setData1(res.data);
       })

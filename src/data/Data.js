@@ -6,10 +6,10 @@ export const dataRequest = (dummy = [], link = null) => {
   return data;
 };
 export const links = {
-  courses: site + "/courses/",
-  students: site + "/students/",
-  tutors: site + "/tutors/",
-  outlines: site + "/outlines/",
+  courses: site + "/courses",
+  students: site + "/students",
+  tutors: site + "/tutors",
+  outlines: site + "/outlines",
 };
 export const dummyCourseData = [
   {

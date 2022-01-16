@@ -1,15 +1,15 @@
 export const NavData = [
   {
     title: "Home",
-    link: "home",
+    link: "/",
     index: true,
   },
   {
     title: "Courses",
-    link: "courses",
+    link: "/courses",
   },
   {
     title: "About",
-    link: "about-us",
+    link: "/about-us",
   },
 ];

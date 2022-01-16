@@ -1,8 +1,11 @@
 import Header from "./header";
+import Footer from "./footer";
 export default function Students(params) {
   return (
-    <><Header />
+    <>
+      <Header />
       <div>Students</div>
+      <Footer />
     </>
   );
 }

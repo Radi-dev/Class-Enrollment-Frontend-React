@@ -1,14 +1,16 @@
-import { dataRequest, links, dummyCourseData as cd } from "../data/Data";
+//import { dataRequest, links, dummyCourseData as cd } from "../data/Data";
 import ImgOrAlt from "./ImgOrAlt";
 import { Link } from "react-router-dom";
 import Header from "./header";
+import Footer from "./footer";
 
-function Courses() {
-  const courseData = dataRequest(cd, links.courses); //remove links.courses to use dummy data. No api call will be made
+function Courses({ data, ...props }) {
+  // const courseData = dataRequest(cd, links.courses); //remove links.courses to use dummy data. No api call will be made
+  const courseData = data;
   return (
     <section className="text-gray-500 body-font">
       <Header />
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-24 mx-auto mb-10">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-600">
             All Courses
@@ -21,11 +23,8 @@ function Courses() {
         <div className=" grid gap-2 md:grid-cols-2 lg:grid-cols-3">
           {courseData ? (
             courseData.map((course, i) => (
-              <Link to={`${course.id}`}>
-                <div
-                  key={i}
-                  className="transform m-2 transition-all scale-100 hover:scale-y-105 h-32 "
-                >
+              <Link to={`${course.id}`} key={i}>
+                <div className="transform m-2 transition-all scale-100 hover:scale-y-105 h-32 ">
                   <div className=" overflow-clip h-full flex items-center border-highl bg-white border-x-2 rounded-md shadow-lg">
                     <div className="float-left w-3/12 h-full bg-purple-100 overflow-clip m-0 mr-2">
                       <ImgOrAlt
@@ -81,6 +80,7 @@ function Courses() {
           )}
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

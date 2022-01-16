@@ -7,13 +7,11 @@ function Navbar({ action }) {
   //let link = "#";
 
   return (
-    <div className="w-1/3 min-w-max shadow-lg z-50 py-10 h-screen absolute bg-white rounded right-0 ">
+    <div className="w-1/3 min-w-max shadow-lg z-[100] py-10 h-full absolute right-0 bg-gray-100 ">
       <ul className="text-center flex flex-col gap-y-10">
         {NavData.map((val, i) => (
-          <li className="px-8 bg-gray-100" key={i}>
-            <Link to={val.link} onClick={action}>
-              {val.title}
-            </Link>
+          <li className="px-8 bg-white" onClick={action} key={i}>
+            <Link to={val.link}>{val.title}</Link>
           </li>
         ))}
       </ul>

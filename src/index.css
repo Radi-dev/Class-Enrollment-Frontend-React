@@ -4,15 +4,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 
 @layer components {
+  .page {
+    @apply bg-prim1 cursor-default relative min-h-screen w-screen overflow-x-hidden m-0;
+  }
   .navbar {
-    @apply lg:hidden transform top-0 duration-300 origin-right
-    absolute right-0 w-screenHalf z-50;
+    @apply lg:hidden transform h-full top-0 duration-300 origin-right
+    absolute right-0 w-max z-[100];
   }
   .bg-prim1 {
-    @apply bg-violet-200;
+    @apply bg-indigo-200;
   }
   .text-prim1 {
-    @apply text-violet-200;
+    @apply text-indigo-200;
   }
 
   .bg-prim1-dark {

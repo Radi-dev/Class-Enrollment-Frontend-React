@@ -1,27 +1,23 @@
-import {
-  dataRequest,
-  links,
-  dummyCourseData as cd,
-  dummyCourseOutlines as co,
-} from "../data/Data";
+//import { dataRequest,links,dummyCourseData as cd,dummyCourseOutlines as co,} from "../data/Data";
 import { useParams } from "react-router";
 import ImgOrAlt from "./ImgOrAlt";
 import YoutubeEmbed from "./YoutubeEmbed";
 import Header from "./header";
+import Footer from "./footer";
 
-const courseDetails = () => {
+/*const courseDetails = () => {
   const courseData = dataRequest(cd, links.courses); // remove links.courses to use dummy data. No api call will be made
   const courseOutlines = dataRequest(co, links.outlines); // remove links.outlines to use dummy data. No api call will be made
   return !courseData || !courseOutlines
     ? null
     : { courseData: courseData, courseOutlines: courseOutlines };
-};
+};*/
 
-export default function Details() {
+export default function Details({ data, ...props }) {
   const params = useParams();
   const id = Number(params.id);
-  const details = courseDetails();
-
+  //const details = courseDetails();
+  const details = data;
   const course = details ? details.courseData[id - 1] : null;
   const outlines = details
     ? details.courseOutlines.filter((outline) => outline.course === id)
@@ -136,6 +132,7 @@ export default function Details() {
           </div>
         </section>
       )}
+      <Footer />
     </section>
   );
 }
