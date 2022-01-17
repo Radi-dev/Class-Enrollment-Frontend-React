@@ -53,17 +53,17 @@ export default function Header({ dark, bgImage, ...props }) {
         <></>
       )}
 
-      <div className="container h-full  mx-auto px-6 flex items-center z-50 justify-between">
+      <div className="container h-full  mx-auto px-6 flex font-bold items-center z-50 justify-between">
         <Link to="/">
           {dark ? (
             <div className="flex items-center h-28 sm:h-32 uppercase text-prim1 text- white font-black">
               <ImgOrAlt src="Logo.png" className="text-xs h-3/4" />
-              <div>{brandNameShort}</div>
+              <div className="text-xs">{brandNameShort}</div>
             </div>
           ) : (
             <div className="flex items-center h-28 sm:h-32 uppercase text-gray-800  font-black">
               <ImgOrAlt src="Logo.png" className="text-xs h-3/4" />
-              <div>{brandNameShort}</div>
+              <div className="text-xs">{brandNameShort}</div>
             </div>
           )}
         </Link>
