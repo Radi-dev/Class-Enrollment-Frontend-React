@@ -1,1 +1,1 @@
-export const site = "http://localhost:8000/api";
+export const site = "https://api.ositainstitute.com/api";
