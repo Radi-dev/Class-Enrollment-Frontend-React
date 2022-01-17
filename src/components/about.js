@@ -4,11 +4,11 @@ export default function About(params) {
   return (
     <>
       <Header />
-      <section class="text-gray-600 body-font">
+      <section class="text-gray-600 body-font sm:mb-10 mb-16 md:mb-4">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap -m-4">
             <div class="p-4 ">
-              <div class="h-full bg-gray-50 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text -center relative">
+              <div class="h-full bg-gray-50 bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text -center relative">
                 <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   About Us
                 </h1>

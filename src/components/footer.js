@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { brandNameShort, socials } from "../data/settings";
 export default function Footer({ dark, ...props }) {
   return (
-    <footer className="footer w-full absolute flex items-center bottom-0 h -10 flex-col justify-between px-6 py-4 bg- white sm:flex-row">
+    <footer className="footer w-full absolute flex items-center bottom-0 flex-col justify-between px-6 py-4 bg-white sm:flex-row">
       <Link to="/">
         {dark ? (
           <div className="uppercase text-sm md:text-xl font-bold text-prim1 hover:text-gray-300">
