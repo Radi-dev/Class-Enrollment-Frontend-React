@@ -13,7 +13,7 @@ export default function About(params) {
                   About Us
                 </h1>
                 <p class="leading-relaxed mb-3">
-                  Acommunity of scholars and technocrats bridging gaps between
+                  A community of scholars and technocrats bridging gaps between
                   design thinking stages to deliver desired living ages one at a
                   time. Your presence is clear indication that your ideas are
                   wide and dignified. Hence, it promises to be an exciting
