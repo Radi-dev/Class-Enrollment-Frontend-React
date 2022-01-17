@@ -45,13 +45,6 @@
 }
 
 @layer utilities {
-  .home-bg {
-    content: " ";
-    background-image: url("../public/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
   @layer base {
     html {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

@@ -1,6 +1,6 @@
 export const site = "https://api.ositainstitute.com/api";
-export const brandName = "Osita international institue";
-export const brandNameShort = "Osita intl' institue";
+export const brandName = "Osita international institute";
+export const brandNameShort = "Osita intl' institute";
 export const socials = [
   {
     name: "fb",

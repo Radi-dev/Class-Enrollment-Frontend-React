@@ -21,10 +21,19 @@ export default function Home(params) {
   return (
     <>
       <Header dark />
-      <div className="home box-border h-screen80 w-full flex z-20 items-center overflow-hidden">
-        <div className="home-bg absolute inset-0 z-1 0 opacity-40  h-full w-full "></div>
+      <div className="home box-border h-screen80 w-full flex  items-center overflow-hidden">
+        <div
+          className="home-bg absolute inset-0  opacity-40  h-full w-full bg-fixed  bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: "url('bg.jpg')",
+          }}
+        >
+          {" "}
+        </div>
 
-        <div className="home-bg2 bg-fixed absolute inset-0 z-0 opacity-70 bg-black h-full w-full "></div>
+        <div className="home-bg2 bg-fixed absolute inset-0  opacity-70 bg-black h-full w-full ">
+          {" "}
+        </div>
         <div className="container mx-auto px-6 flex">
           <div className="sm:w-2/3 lg:w-2/5 flex flex-col z-20">
             <span className="w-20 h-2 bg-gray-400 mb-12"></span>

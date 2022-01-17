@@ -38,33 +38,38 @@ export default function Header({ dark, bgImage, ...props }) {
   ));
   OnClickOutside(ref, () => setOpen(false));
   return (
-    <header className=" header h-32 sm:h-40 flex items-center z-30 w-full bg-t ransparent font-Comfortaa">
+    <header className=" header h-32 sm:h-40 flex items-center z- 10 w-full bg-t ransparent font-Comfortaa">
       {bgImage ? (
-        <div
-          className=" headerBg h-32 sm:h-40 absolute bg-center bg-cover bg-no-repeat inset-x-0 opacity-30"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-          }}
-        ></div>
+        <>
+          <div className=" headerBg h-32 sm:h-40 absolute bg-black  inset-x-0 opacity-30"></div>
+          <div
+            className=" headerBg h-32 sm:h-40 absolute bg-center bg-cover bg-no-repeat inset-x-0 opacity-30"
+            style={{
+              backgroundImage: `url(${bgImage})`,
+            }}
+          ></div>
+        </>
       ) : (
         <></>
       )}
 
-      <div className="container  mx-auto px-6 flex items-center justify-between">
+      <div className="container h-full  mx-auto px-6 flex items-center z-50 justify-between">
         <Link to="/">
           {dark ? (
-            <div className="uppercase text-prim1 text- white font-black">
-              <ImgOrAlt src="#" alt={brandNameShort} className="text-sm" />
+            <div className="flex items-center h-28 sm:h-32 uppercase text-prim1 text- white font-black">
+              <ImgOrAlt src="Logo.png" className="text-xs h-3/4" />
+              <div>{brandNameShort}</div>
             </div>
           ) : (
-            <div className="uppercase text-gray-800  font-black">
-              <ImgOrAlt src="#" alt={brandNameShort} className="text-sm" />
+            <div className="flex items-center h-28 sm:h-32 uppercase text-gray-800  font-black">
+              <ImgOrAlt src="Logo.png" className="text-xs h-3/4" />
+              <div>{brandNameShort}</div>
             </div>
           )}
         </Link>
 
         {dark ? (
-          <div className="flex items-center z-50">
+          <div className="flex items-center ">
             <nav className="font-sen text-prim1 uppercase text-lg lg:flex items-center hidden">
               {navJsx}
             </nav>
@@ -78,7 +83,7 @@ export default function Header({ dark, bgImage, ...props }) {
             </button>
           </div>
         ) : (
-          <div className="flex items-center z-50">
+          <div className="flex items-center ">
             <nav className="font-sen text-gray-800 uppercase text-lg lg:flex items-center hidden">
               {navJsx}
             </nav>

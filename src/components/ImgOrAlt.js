@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const ImgOrAlt = ({ src, alt = "Image", ...props }) => {
+const ImgOrAlt = ({ src, alt = "", ...props }) => {
   /*
   This function displays the target image if its available, but
   only displays alt text (without the broken image icon) when the 
