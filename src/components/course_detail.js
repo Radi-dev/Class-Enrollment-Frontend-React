@@ -24,7 +24,7 @@ export default function Details({ data, ...props }) {
     : null;
   return (
     <section className="details text-gray-600 body-font">
-      <Header />
+      {course ? <Header bgImage={course.photo} /> : <Header />}
       {course ? (
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">

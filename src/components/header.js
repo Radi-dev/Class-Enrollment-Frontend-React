@@ -23,7 +23,7 @@ function OnClickOutside(ref, handler) {
   }, [ref, handler]);
 }
 
-export default function Header({ dark, ...props }) {
+export default function Header({ dark, bgImage, ...props }) {
   const [open, setOpen] = useState(false);
   const ref = useRef();
   const menuClick = () => setOpen(!open);
@@ -38,11 +38,22 @@ export default function Header({ dark, ...props }) {
   ));
   OnClickOutside(ref, () => setOpen(false));
   return (
-    <header className=" header h-32 sm:h-40 flex items-center z-30 w-full bg-green-200 bg-t ransparent font-Comfortaa">
+    <header className=" header h-32 sm:h-40 flex items-center z-30 w-full bg-t ransparent font-Comfortaa">
+      {bgImage ? (
+        <div
+          className=" headerBg h-32 sm:h-40 absolute bg-center bg-cover bg-no-repeat inset-x-0 opacity-30"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+          }}
+        ></div>
+      ) : (
+        <></>
+      )}
+
       <div className="container  mx-auto px-6 flex items-center justify-between">
         <Link to="/">
           {dark ? (
-            <div className="uppercase text- prim1 font-black z-50">
+            <div className="uppercase text-prim1 text- white font-black">
               <ImgOrAlt src="#" alt={brandNameShort} className="text-sm" />
             </div>
           ) : (
