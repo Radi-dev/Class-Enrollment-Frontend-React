@@ -4,6 +4,7 @@ import ImgOrAlt from "./ImgOrAlt";
 import YoutubeEmbed from "./YoutubeEmbed";
 import Header from "./header";
 import Footer from "./footer";
+import { Link } from "react-router-dom";
 
 /*const courseDetails = () => {
   const courseData = dataRequest(cd, links.courses); // remove links.courses to use dummy data. No api call will be made
@@ -47,7 +48,10 @@ export default function Details({ data, ...props }) {
               </p>
             </div>
             <div className=" grid md:grid-cols-2 ">
-              <ol className="p-2  w-full overflow-auto">
+              <ol className="p-2  w-full overflow-y-auto">
+                <h1 className="text-center font-bold underline text-2xl">
+                  Course Outline
+                </h1>
                 {outlines.map((outline, i) => (
                   <li
                     key={i}
@@ -57,14 +61,33 @@ export default function Details({ data, ...props }) {
                       <h2 className="text-cyan-700 title-font font-medium">
                         {outline.title}
                       </h2>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
                     </div>
                     <p className="text-gray-500 p-2">{outline.description}</p>
                   </li>
                 ))}
+                <Link to={`enroll`}>
+                  <div className="button p-1 rounded text-center bg-highl-hov mx-3 mt-6 ring-1 ring-white shadow-lg text-white">
+                    Enroll
+                  </div>
+                </Link>
               </ol>
 
-              <div className="Tutor border rounded-lg shadow-md bg-white m-4">
-                <div className="flex items-center flex-col text-center w-full mb-20">
+              <div className="Tutor border rounded-lg shadow-md w-3/4 bg-white mb-12">
+                <div className="flex items-center flex-col text-center w-full mb-8">
                   <h1 className="text-lg font-medium title-font mb-4 text-gray-900">
                     Instructor
                   </h1>

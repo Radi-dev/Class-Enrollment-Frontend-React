@@ -38,7 +38,10 @@ export default function App() {
           <Route path="courses/:id" element={<Details data={details} />} />
           <Route path="admin" element={<Admin />} />
           <Route path="about-us" element={<About />} />
-          <Route path="enroll" element={<Enroll />} />
+          <Route
+            path="courses/:id/enroll"
+            element={<Enroll data={courseData} />}
+          />
           <Route path="admin/tutors" element={<Tutors />} />
           <Route path="admin/students" element={<Students />} />
           <Route path="nn" element={<NotFound />} />
