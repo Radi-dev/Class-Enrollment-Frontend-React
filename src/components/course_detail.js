@@ -57,13 +57,13 @@ export default function Details({ data, ...props }) {
                     key={i}
                     className=" border-x-2 m-2 relative transition-all overflow-clip duration-200 max-h-10 hover:max-h-96 hover:pt-11 border-blue-300 bor der shadow-md bg-white rounded-lg"
                   >
-                    <div className="absolute top-0 w-full  pl-2 h-9 my-auto flex items-center border-blue-300 shadow-md bg-white rounded-lg">
-                      <h2 className="text-cyan-700 title-font font-medium">
+                    <div className="absolute text-cyan-700 top-0 w-full  px-2 h-9 my-auto flex justify-between items-center border-blue-300 shadow-md bg-white rounded-lg">
+                      <h2 className=" title-font font-medium">
                         {outline.title}
                       </h2>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
+                        className="h-4 w-4"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -86,7 +86,7 @@ export default function Details({ data, ...props }) {
                 </Link>
               </ol>
 
-              <div className="Tutor border rounded-lg shadow-md w-3/4 bg-white mb-12 h-max">
+              <div className="Tutor bord er rounded-lg shadow-md w-3/4 mx-auto bg-white mb-12 h-max">
                 <div className="flex items-center flex-col text-center w-full mb-8 h-max">
                   <h1 className="text-lg font-medium title-font mb-4 text-gray-900">
                     Instructor

@@ -39,7 +39,8 @@ function Courses({ data, ...props }) {
                           {course.title}
                         </h2>
                         <p className="text-gray-500">
-                          {course.description.slice(0, 50)}...
+                          {course.description.slice(0, 50)}
+                          <span className="text-highl">...</span>
                         </p>
                       </div>
                     </div>
