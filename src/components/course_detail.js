@@ -48,7 +48,7 @@ export default function Details({ data, ...props }) {
               </p>
             </div>
             <div className=" grid md:grid-cols-2 ">
-              <ol className="p-2  w-full overflow-y-auto">
+              <ol className="p-2 pt-0 w-full overflow-y-auto">
                 <h1 className="text-center font-bold underline text-2xl">
                   Course Outline
                 </h1>
@@ -79,15 +79,15 @@ export default function Details({ data, ...props }) {
                     <p className="text-gray-500 p-2">{outline.description}</p>
                   </li>
                 ))}
-                <Link to={`enroll`}>
+                <Link to={"enroll/"}>
                   <div className="button p-1 rounded text-center bg-highl-hov mx-3 mt-6 ring-1 ring-white shadow-lg text-white">
                     Enroll
                   </div>
                 </Link>
               </ol>
 
-              <div className="Tutor border rounded-lg shadow-md w-3/4 bg-white mb-12">
-                <div className="flex items-center flex-col text-center w-full mb-8">
+              <div className="Tutor border rounded-lg shadow-md w-3/4 bg-white mb-12 h-max">
+                <div className="flex items-center flex-col text-center w-full mb-8 h-max">
                   <h1 className="text-lg font-medium title-font mb-4 text-gray-900">
                     Instructor
                   </h1>
