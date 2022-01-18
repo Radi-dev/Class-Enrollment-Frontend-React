@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import Header from "./header";
+import Footer from "./footer";
 
 export default function Enroll({ data, ...props }) {
   const params = useParams();
@@ -11,6 +12,7 @@ export default function Enroll({ data, ...props }) {
       <Header />
 
       <div>Enroll {course.title} </div>
+      <Footer />
     </>
   );
 }

@@ -23,7 +23,7 @@ function OnClickOutside(ref, handler) {
   }, [ref, handler]);
 }
 
-export default function Header({ dark, bgImage, ...props }) {
+export default function Header({ dark, bgImage = "/bg.jpg", ...props }) {
   const [open, setOpen] = useState(false);
   const ref = useRef();
   const menuClick = () => setOpen(!open);
@@ -57,12 +57,12 @@ export default function Header({ dark, bgImage, ...props }) {
         <Link to="/">
           {dark ? (
             <div className="flex items-center h-28 sm:h-32 uppercase text-prim1 text- white font-black">
-              <ImgOrAlt src="Logo.png" className="text-xs h-3/4" />
+              <ImgOrAlt src="/Logo.png" className="text-xs h-3/4" />
               <div className="text-xs">{brandNameShort}</div>
             </div>
           ) : (
             <div className="flex items-center h-28 sm:h-32 uppercase text-gray-800  font-black">
-              <ImgOrAlt src="Logo.png" className="text-xs h-3/4" />
+              <ImgOrAlt src="/Logo.png" className="text-xs h-3/4" />
               <div className="text-xs">{brandNameShort}</div>
             </div>
           )}

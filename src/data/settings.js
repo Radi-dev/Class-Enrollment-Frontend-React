@@ -1,4 +1,4 @@
-export const site = "https://api.ositainstitute.com/api";
+export const site = "https://api.ositainstitute.com/api"; //"http://127.0.0.1:8000/api";
 export const brandName = "Osita international institute";
 export const brandNameShort = "Osita intl' institute";
 export const socials = [

@@ -9,7 +9,7 @@ function Courses({ data, ...props }) {
   const courseData = data;
   return (
     <>
-      <Header bgImage="bg.jpg" />
+      <Header />
       <section className="text-gray-500 body-font">
         <div className="container px-5 py-24 mx-auto mb-10">
           <div className="flex flex-col text-center w-full mb-20">

@@ -20,10 +20,10 @@ export default function Home(params) {
   );
   return (
     <>
-      <Header dark />
+      <Header dark bgImage="" />
       <div className="home box-border h-screen80 w-full flex  items-center overflow-hidden">
         <div
-          className="home-bg absolute inset-0  opacity-40  h-full w-full bg- fixed  bg-cover bg-no-repeat"
+          className="home-bg absolute inset-0  opacity-40  h-full w-full  bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('bg.jpg')",
           }}
