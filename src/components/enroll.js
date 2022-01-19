@@ -4,7 +4,10 @@ import Footer from "./footer";
 import { useInput } from "./useInput";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { AxiosPost } from "./useAxios";
+import { links } from "../data/Data";
+import { EnrollSuccess } from "./alerts";
 
 export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
   const params = useParams();
@@ -18,9 +21,34 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
   const [emailProps, resetEmail] = useInput("");
   const [courseProps, resetCourse] = useInput();
   const [phonNum, setPhonNum] = useState("234");
-  const submit = (event) => {
-    event.preventDefault();
-    //onNewReg(titleProps.value, colorProps.value);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(false);
+    }, 4000);
+
+    return () => {
+      clearTimeout();
+    };
+  }, [show]);
+
+  const submit = (e) => {
+    e.preventDefault();
+    const newRegData = {
+      first_name: firstNameProps.value,
+      other_name: otherNamesProps.value,
+      last_name: lastNameProps.value,
+      email: emailProps.value,
+      phone_number: phonNum,
+      photo: null,
+      thumb_photo: null,
+      course: [id],
+    };
+
+    AxiosPost(links.students, newRegData);
+    setShow(true);
+
     resetFirstName();
     resetLastName();
     resetOtherNames();
@@ -31,7 +59,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
   return (
     <>
       <Header />
-
+      {show ? <EnrollSuccess /> : ""}
       {course ? (
         <div className=" mx-auto my-4 flex flex-col max-w-md px-4 py-8 bg-white rounded-lg shadow da rk:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
           <div className="self-center mb-2 text-xl text-gray-800 sm:text-2xl da rk:text-white">
@@ -54,18 +82,6 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
                   />
                 </div>
               </div>
-              <div className="flex flex-col mb-2">
-                <div className=" relative ">
-                  <input
-                    {...lastNameProps}
-                    type="text"
-                    placeholder="Last Name: required"
-                    required
-                    id="create-account-lastName"
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  />
-                </div>
-              </div>
 
               <div className="flex flex-col mb-2">
                 <div className=" relative ">
@@ -74,6 +90,19 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
                     type="text"
                     placeholder="Other Names"
                     id="create-account-otherNames"
+                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col mb-2">
+                <div className=" relative ">
+                  <input
+                    {...lastNameProps}
+                    type="text"
+                    placeholder="Last Name: required"
+                    required
+                    id="create-account-lastName"
                     className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   />
                 </div>

@@ -9,24 +9,19 @@ import Tutors from "./components/tutors";
 import Enroll from "./components/enroll";
 import NotFound from "./components/404";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-//import { dataRequest, links, dummyCourseData as cd } from "./data/Data";
-import {
-  dataRequest,
-  links,
-  dummyCourseData as cd,
-  dummyCourseOutlines as co,
-} from "./data/Data";
+import { links } from "./data/Data";
+import AxiosGet from "./components/useAxios";
 
 const courseDetails = () => {
-  const courseData = dataRequest(cd, links.courses); // remove links.courses to use dummy data. No api call will be made
-  const courseOutlines = dataRequest(co, links.outlines); // remove links.outlines to use dummy data. No api call will be made
+  const courseData = AxiosGet(links.courses);
+  const courseOutlines = AxiosGet(links.outlines);
   return !courseData || !courseOutlines
     ? null
     : { courseData: courseData, courseOutlines: courseOutlines };
 };
 
 export default function App() {
-  const courseData = dataRequest(cd, links.courses); //remove links.courses to use dummy data. No api call will be made
+  const courseData = AxiosGet(links.courses);
   const details = courseDetails();
 
   return (
