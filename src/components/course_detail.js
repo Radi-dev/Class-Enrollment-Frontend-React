@@ -5,6 +5,7 @@ import YoutubeEmbed from "./YoutubeEmbed";
 import Header from "./header";
 import Footer from "./footer";
 import { Link } from "react-router-dom";
+import { Cacarousel } from "./carousel";
 
 /*const courseDetails = () => {
   const courseData = dataRequest(cd, links.courses); // remove links.courses to use dummy data. No api call will be made
@@ -16,12 +17,15 @@ import { Link } from "react-router-dom";
 
 export default function Details({ data, ...props }) {
   const params = useParams();
-  const id = Number(params.id);
+  const id = Number(params.id) - 1;
   //const details = courseDetails();
   const details = data;
-  const course = details ? details.courseData[id - 1] : null;
+  const course = details ? details.courseData[id] : null;
   const outlines = details
-    ? details.courseOutlines.filter((outline) => outline.course === id)
+    ? details.courseOutlines.filter((outline) => outline.course === course.id)
+    : null;
+  const imagesArray = details
+    ? details.courseImages.filter((image) => image.course === course.id)
     : null;
   return (
     <>
@@ -33,16 +37,15 @@ export default function Details({ data, ...props }) {
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
                 {course.title}
               </h1>
-              {course.intro_video_embed_id ? (
-                <div className="h-52 w-full lg:w-1/2 mx-auto ">
-                  <YoutubeEmbed
-                    embedId={course.intro_video_embed_id}
-                    className="rounded-lg"
-                  />
-                </div>
-              ) : (
-                ""
-              )}
+
+              <div className="h-52 w-full lg:w-1/2 mx-auto ">
+                {console.log("vid link 1: " + course.intro_video_embed_id)}
+                <Cacarousel
+                  images={imagesArray}
+                  video={course.intro_video_embed_id}
+                />
+              </div>
+
               <p className="lg:w-1/2 mt-10 mx-auto leading-relaxed text-base">
                 {course.description}
               </p>

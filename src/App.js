@@ -15,9 +15,14 @@ import AxiosGet from "./components/useAxios";
 const courseDetails = () => {
   const courseData = AxiosGet(links.courses);
   const courseOutlines = AxiosGet(links.outlines);
-  return !courseData || !courseOutlines
+  const courseImages = AxiosGet(links.gallery);
+  return !courseData || !courseOutlines || !courseImages
     ? null
-    : { courseData: courseData, courseOutlines: courseOutlines };
+    : {
+        courseData: courseData,
+        courseOutlines: courseOutlines,
+        courseImages: courseImages,
+      };
 };
 
 export default function App() {

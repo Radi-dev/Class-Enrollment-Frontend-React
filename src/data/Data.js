@@ -5,4 +5,5 @@ export const links = {
   students: site + "/students/",
   tutors: site + "/tutors/",
   outlines: site + "/outlines/",
+  gallery: site + "/gallery/",
 };
