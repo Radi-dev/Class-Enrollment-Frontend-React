@@ -123,7 +123,7 @@ export default function Details({ data, ...props }) {
             </div>
           </div>
         ) : (
-          <section>
+          <section className="m-4 mb-32">
             <div className="bg-white mb-6 w-96 mx-auto rounded-2xl">
               <div className="bg-gray-200 h-48 p-3 overflow-hidden animate-pulse"></div>
               <div className="h- p-3">
