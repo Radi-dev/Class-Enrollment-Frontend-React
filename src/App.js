@@ -39,7 +39,7 @@ export default function App() {
           />
           <Route path="admin/tutors" element={<Tutors />} />
           <Route path="admin/students" element={<Students />} />
-          <Route path="nn" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </main>
