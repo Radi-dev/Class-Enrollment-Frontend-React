@@ -2,21 +2,9 @@ import axios from "axios"; // new
 import { useEffect, useState } from "react";
 
 export function AxiosPost(link, item) {
-  // const [result, setResult] = useState();
-  console.log("axios post");
-
-  //useEffect(() => {
-  console.log("item is: " + item);
-  axios
-    .post(link, item)
-    //   .then((res) => setResult(res))
-    .then((res) => console.log("res is: " + res.data.id))
-    .catch(function (error) {
-      console.log(error);
-    });
-  // }, []);
-  // if (!result) return null;
-  // return result;
+  axios.post(link, item).catch(function (error) {
+    console.log(error);
+  });
 }
 
 export default function AxiosGet(link) {
@@ -28,11 +16,8 @@ export default function AxiosGet(link) {
       .then((res) => {
         setData1(res.data);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => {});
   }, []);
-  // new
 
   if (!data1) return null;
   return data1;

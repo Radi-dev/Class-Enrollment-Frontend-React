@@ -61,7 +61,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
       <Header />
       {show ? <EnrollSuccess /> : ""}
       {course ? (
-        <div className=" mx-auto my-4 flex flex-col max-w-md px-4 py-8 bg-white rounded-lg shadow da rk:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
+        <div className=" mb-40 mx-auto my-4 flex flex-col max-w-md px-4 py-8 bg-white rounded-lg shadow da rk:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
           <div className="self-center mb-2 text-xl text-gray-800 sm:text-2xl da rk:text-white">
             Course Enrollment Form
           </div>
@@ -143,7 +143,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
               />
 
               <div className="flex w-full my-4">
-                <button className="py-2 px-4  bg-highl-hov focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                <button className="py-2 px-4  bg-highl-hov focus:ring-cyan-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                   Submit
                 </button>
               </div>
