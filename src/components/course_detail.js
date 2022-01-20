@@ -16,10 +16,10 @@ import { Cacarousel } from "./carousel";
 
 export default function Details({ data, ...props }) {
   const params = useParams();
-  const id = Number(params.id) - 1;
+  const id = Number(params.id);
   //const details = courseDetails();
   const details = data;
-  const course = details ? details.courseData[id] : null;
+  const course = details ? details.courseData.find((a) => a.id === id) : null;
   const outlines = details
     ? details.courseOutlines.filter((outline) => outline.course === course.id)
     : null;

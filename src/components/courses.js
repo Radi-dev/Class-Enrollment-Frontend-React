@@ -24,7 +24,7 @@ function Courses({ data, ...props }) {
           <div className=" grid gap-2 md:grid-cols-2 lg:grid-cols-3">
             {courseData ? (
               courseData.map((course, i) => (
-                <Link to={`${course.index}`} key={i}>
+                <Link to={`${course.id}`} key={i}>
                   <div className="transform m-2 transition-all scale-100 hover:scale-y-105 h-32 ">
                     <div className=" overflow-clip h-full flex items-center border-highl bg-white border-x-2 rounded-md shadow-lg">
                       <div className="float-left w-3/12 h-full bg-purple-100 overflow-clip m-0 mr-2">
