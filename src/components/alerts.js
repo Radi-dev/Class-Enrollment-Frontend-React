@@ -1,6 +1,6 @@
 export const EnrollSuccess = (show) => {
   return (
-    <div className="absolute z-10 top-32 w-full ">
+    <div className="absolute z-10 bottom-44 w-full ">
       <div className=" flex  w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-md ">
         <div className="flex items-center justify-center w-12 bg-emerald-500">
           <svg

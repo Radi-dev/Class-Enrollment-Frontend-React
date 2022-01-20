@@ -78,7 +78,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
                     placeholder="First Name: required"
                     required
                     id="create-account-firstName"
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -90,7 +90,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
                     type="text"
                     placeholder="Other Names"
                     id="create-account-otherNames"
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
                     placeholder="Last Name: required"
                     required
                     id="create-account-lastName"
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
                     placeholder="@ email: required"
                     required
                     id="create-account-email"
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
                     disabled
                     required
                     id={course.title}
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
               />
 
               <div className="flex w-full my-4">
-                <button className="py-2 px-4  bg-highl-hov focus:ring-cyan-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                <button className="py-2 px-4  bg-highl-hov focus:ring-cyan-500 focus:ring-offset-cyan-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                   Submit
                 </button>
               </div>
