@@ -43,7 +43,7 @@ export const Cacarousel = ({ images, video }) => (
       {images.map((image, i) => (
         <div key={i} className=" h-52 mx-1  ">
           <img
-            src={image.thumb_photo}
+            src={image.photo}
             alt="img"
             className="mx-auto w-full border-gray-500 border h-full object-cover rounded-lg "
           />

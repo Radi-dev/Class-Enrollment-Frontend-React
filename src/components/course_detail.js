@@ -1,7 +1,6 @@
 //import { dataRequest,links,dummyCourseData as cd,dummyCourseOutlines as co,} from "../data/Data";
 import { useParams } from "react-router";
 import ImgOrAlt from "./ImgOrAlt";
-import YoutubeEmbed from "./YoutubeEmbed";
 import Header from "./header";
 import Footer from "./footer";
 import { Link } from "react-router-dom";
