@@ -1,10 +1,10 @@
 //import { dataRequest,links,dummyCourseData as cd,dummyCourseOutlines as co,} from "../data/Data";
 import { useParams } from "react-router";
-import ImgOrAlt from "./ImgOrAlt";
-import Header from "./header";
-import Footer from "./footer";
+import ImgOrAlt from "../components/ImgOrAlt";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import { Link } from "react-router-dom";
-import { Cacarousel } from "./carousel";
+import { Cacarousel } from "../components/carousel";
 
 /*const courseDetails = () => {
   const courseData = dataRequest(cd, links.courses); // remove links.courses to use dummy data. No api call will be made

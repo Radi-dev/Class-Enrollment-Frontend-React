@@ -1,13 +1,13 @@
 import { useParams } from "react-router";
-import Header from "./header";
-import Footer from "./footer";
-import { useInput } from "./useInput";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import { useInput } from "../components/useInput";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useState, useEffect } from "react";
-import { AxiosPost } from "./useAxios";
+import { AxiosPost } from "../components/useAxios";
 import { links } from "../data/Data";
-import { EnrollSuccess } from "./alerts";
+import { EnrollSuccess } from "../components/alerts";
 
 export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
   const params = useParams();

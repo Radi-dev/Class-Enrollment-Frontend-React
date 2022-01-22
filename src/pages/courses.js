@@ -1,8 +1,8 @@
 //import { dataRequest, links, dummyCourseData as cd } from "../data/Data";
-import ImgOrAlt from "./ImgOrAlt";
+import ImgOrAlt from "../components/ImgOrAlt";
 import { Link } from "react-router-dom";
-import Header from "./header";
-import Footer from "./footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function Courses({ data, ...props }) {
   // const courseData = dataRequest(cd, links.courses); //remove links.courses to use dummy data. No api call will be made
