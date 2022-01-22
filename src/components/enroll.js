@@ -58,7 +58,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
   };
   return (
     <>
-      <Header />
+      {course ? <Header bgImage={course.photo} /> : <Header />}
       {show ? <EnrollSuccess /> : ""}
       {course ? (
         <div className=" mb-40 mx-auto my-4 flex flex-col max-w-md px-4 py-8 bg-white rounded-lg shadow da rk:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
