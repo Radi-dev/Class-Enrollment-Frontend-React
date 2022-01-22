@@ -13,7 +13,7 @@ export default function Enroll({ data, onNewReg = (f) => f, ...props }) {
   const params = useParams();
   const id = Number(params.id);
   const courseData = data;
-  const course = courseData ? courseData[id - 1] : null;
+  const course = courseData ? courseData.find((a) => a.id === id) : null;
 
   const [firstNameProps, resetFirstName] = useInput("");
   const [lastNameProps, resetLastName] = useInput("");

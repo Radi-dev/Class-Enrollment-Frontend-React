@@ -37,15 +37,14 @@ export default function Details({ data, ...props }) {
                 {course.title}
               </h1>
 
-              <div className="h-52 w-full lg:w-1/2 mx-auto ">
-                {console.log("vid link 1: " + course.intro_video_embed_id)}
+              <div className="h- 52 w-full lg:w-2/3 mx-auto ">
                 <Cacarousel
                   images={imagesArray}
                   video={course.intro_video_embed_id}
                 />
               </div>
 
-              <p className="lg:w-1/2 mt-10 mx-auto leading-relaxed text-base">
+              <p className=" w-full lg:w-2/3 mt-10 mx-auto leadi ng-relaxed text-center">
                 {course.description}
               </p>
             </div>
@@ -88,8 +87,8 @@ export default function Details({ data, ...props }) {
                 </Link>
               </ol>
 
-              <div className="Tutor bord er rounded-lg shadow-md w-3/4 mx-auto bg-white mb-12 h-max">
-                <div className="flex items-center flex-col text-center w-full mb-8 h-max">
+              <div className="Tutor rounded-lg shadow-md mx-aut o mx-3 bg-white mb-12">
+                <div className="flex items-center p-2 flex-col text-base text-center w-full mb-8 h-max">
                   <h1 className="text-lg font-medium title-font mb-4 text-gray-900">
                     Instructor
                   </h1>
@@ -105,17 +104,19 @@ export default function Details({ data, ...props }) {
                           <ImgOrAlt
                             src={course.tutor.thumb_photo}
                             alt={course.tutor.name}
-                            className="mx-auto object-cover rounded-full h-40 w-40 "
+                            className="mx-auto object-right-top object-cover rounded-full h-40 w-40 "
                           />
                         </a>
                       </div>
 
-                      <p className="mx-auto leading-relaxed text-base">
+                      <p className="mx-auto leading-relaxed font-bold text-base">
                         {course.tutor.name}
                       </p>
-                      <p className="mx-auto leading-relaxed text-base">
-                        {course.tutor.about}
-                      </p>
+                      <div className=" h-80 overflow-y-scroll px-1">
+                        <p className="mx-auto leading-relaxed text-base">
+                          {course.tutor.about}
+                        </p>
+                      </div>
                     </>
                   ) : (
                     <p>Not yet assigned</p>

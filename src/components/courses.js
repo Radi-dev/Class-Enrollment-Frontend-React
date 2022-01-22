@@ -25,24 +25,22 @@ function Courses({ data, ...props }) {
             {courseData ? (
               courseData.map((course, i) => (
                 <Link to={`${course.id}`} key={i}>
-                  <div className="transform m-2 transition-all scale-100 hover:scale-y-105 h-32 ">
-                    <div className=" overflow-clip h-full flex items-center border-highl bg-white border-x-2 rounded-md shadow-lg">
-                      <div className="float-left w-3/12 h-full bg-purple-100 overflow-clip m-0 mr-2">
-                        <ImgOrAlt
-                          alt={course.title}
-                          className=" h-full w-full object-cover object-center"
-                          src={course.thumb_photo}
-                        />
-                      </div>
-                      <div className="flex-grow">
-                        <h2 className="text-blue-600 title-font font-medium">
-                          {course.title}
-                        </h2>
-                        <p className="text-gray-500">
-                          {course.description.slice(0, 50)}
-                          <span className="text-highl">...</span>
-                        </p>
-                      </div>
+                  <div className=" transfor m m-2 transition-all scale-100 hover:scale-y-105 h-32 overflow-clip flex items-center border-highl bg-white border-x-2 rounded-md shadow-lg">
+                    <div className="float-left overflow-hidden w-3/12 h-full bg-purple-100 m-0 ">
+                      <ImgOrAlt
+                        alt={course.title}
+                        className=" h-full w-full object-cover object-center"
+                        src={course.thumb_photo}
+                      />
+                    </div>
+                    <div className="flex-grow p-2">
+                      <h2 className="text-blue-600 title-font font-medium">
+                        {course.title}
+                      </h2>
+                      <p className="text-gray-500">
+                        {course.description.slice(0, 50)}
+                        <span className="text-highl">...</span>
+                      </p>
                     </div>
                   </div>
                 </Link>

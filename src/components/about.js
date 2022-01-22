@@ -8,7 +8,7 @@ export default function About(params) {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
             <div className="p-4 ">
-              <div className="h-full bg-gray-50 bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text -center relative">
+              <div className="h-full bg-white shadow bg-opacity-75 px-8 pt-16 pb-10 rounded-lg overflow-hidden text -center relative">
                 <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   About Us
                 </h1>

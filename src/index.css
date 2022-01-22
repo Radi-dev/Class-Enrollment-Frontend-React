@@ -12,10 +12,10 @@
     absolute right-0 w-max z-[100];
   }
   .bg-prim1 {
-    @apply bg-indigo-200;
+    @apply bg-primColor;
   }
   .text-prim1 {
-    @apply text-indigo-200;
+    @apply text-primColor;
   }
 
   .bg-prim1-dark {
